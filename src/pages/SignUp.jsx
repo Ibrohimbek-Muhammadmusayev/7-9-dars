@@ -38,17 +38,17 @@ function SignUp() {
   setifs(ifs)
   }
   return (
-    <>{ifs == 'true' ? <Navigate to={'/'}/> : 
-      <div className="w-[400px] flex justify-center items-center h-[400px] bg-teal-400 rounded-[12px]">
+    <div className='w-[100%] h-[100vh] flex justify-center items-center'>{ifs === 'true' ? <Navigate to={'/'}/> : 
+      <div className="w-[400px] flex justify-center items-center h-[400px] bg-teal-400 border-[3px] border-indigo-500 rounded-[12px]">
         <form onSubmit={hendlesubmit} className='w-[300px] h-[300px] flex flex-col'>
           <label className='text-start text-[20px] text-blue-800'>Email</label>
           <input value={users.email} onChange={(e)=> setUsers((pref)=> ({...pref, email: e.target.value}))} className='h-[50px] border-[2px] border-gray-600 rounded-[8px]' type="email" required/>
           <label className='text-start text-[20px] text-blue-800'>Password</label>
           <input value={users.password} onChange={(e)=> setUsers((pref)=> ({...pref, password: e.target.value}))} className='h-[50px] border-[2px] border-gray-600 rounded-[8px]' type="password" required/>
-          <button className='mt-[60px] border-[2px] border-gray-600' type='submit'>Submit</button>
+          <button className='mt-[60px] border-[2px] border-gray-600 bg-cyan-600' type='submit'>Submit</button>
         </form>
       </div>}
-    </>
+    </div>
   )
 }
 
